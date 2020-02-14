@@ -1,0 +1,11 @@
+:root {
+  --light:#FA8072;
+  --primary:crimson;
+  --dark:#bf0a30;
+  --text:#fff;
+  --background:#212121;
+  --background-light:#3e424b;
+  --hint:#999;
+  --border:#292929;
+  --font-family:"Muli",sans-serif;
+  --progress:0; }
