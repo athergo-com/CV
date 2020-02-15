@@ -9,8 +9,7 @@ html {
 body {
   font-family: var(--font-family);
   color: var(--text);
-  font-size: 1.6rem;
-  background-color: var(--background); }
+  font-size: 1.6rem; }
 
 p {
   margin: 1rem 0; }
@@ -191,3 +190,38 @@ img {
 /*laptop small*/
 /*laptop large*/
 /*4k*/
+.container {
+  min-height: 100vh;
+  background-color: var(--background);
+  display: grid; }
+  @media (max-width: 320px) {
+    .container {
+      grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto /auto; } }
+  @media (min-width: 321px) and (max-width: 375px) {
+    .container {
+      grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto /auto; } }
+  @media (min-width: 375px) and (max-width: 425px) {
+    .container {
+      grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto /auto; } }
+  @media (min-width: 425px) and (max-width: 768px) {
+    .container {
+      grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto /auto; } }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+      grid: "picture header header header" auto "aside main main main" 1fr "footer footer footer footer" 10% /25% auto; } }
+  @media (min-width: 1024px) and (max-width: 1440px) {
+    .container {
+      grid: "picture header header header" auto "aside main main main" 1fr "footer footer footer footer" 10% /25% auto; } }
+  @media (min-width: 1440px) and (max-width: 2560px) {
+    .container {
+      grid: "picture header header header" auto "aside main main main" 1fr "footer footer footer footer" 10% /25% auto; } }
+  .container .picture {
+    grid-area: picture; }
+  .container header {
+    grid-area: header; }
+  .container aside {
+    grid-area: aside; }
+  .container main {
+    grid-area: main; }
+  .container footer {
+    grid-area: footer; }
