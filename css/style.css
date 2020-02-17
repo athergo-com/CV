@@ -228,6 +228,12 @@ img {
             border-radius: 50%;
             filter: grayscale(100%);
         }*/ }
+    @media (max-width: 768px) {
+      .container .picture {
+        background-color: var(--background); } }
+    @media (min-width: 768px) {
+      .container .picture {
+        background: linear-gradient(to top, var(--background), var(--primary)); } }
   .container header {
     grid-area: header;
     /* display:flex;
