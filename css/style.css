@@ -219,44 +219,27 @@ img {
     justify-content: center;
     text-align: center;
     align-items: center;
-    background: linear-gradient(to top, var(--background), var(--primary));
-    /* @include ms {
-           padding: 4rem 2rem;
-        }
-        @include mm {
-            padding: 4rem 2rem;
-         }
-         @include ml {
-            padding: 4rem 2rem;
-         }
-         @include tb {
-            padding: 8rem 5rem;
-         }
-         @include ls {
-            padding: 8rem 5rem;
-         }
-         @include ll {
-            padding: 8rem 5rem;
-         }
-         @include uhd {
-            padding: 8rem 5rem;
-         }
-         h1 {
-            line-height: 8rem;
-            font-weight: 300;
-            letter-spacing: 3rem;
-            @include ms {
-               font-size: 2rem;
-               letter-spacing: 2rem;
-               line-height: 4rem;
-             }
-         }
-
-         p {
-            font-size: 1.5rem;
-            letter-spacing: 1rem;
-            line-height: 2.5rem;
-         }*/ }
+    background: linear-gradient(to top, var(--background), var(--primary)); }
+    @media (max-width: 768px) {
+      .container header {
+        padding: 4rem 2rem; } }
+    @media (min-width: 425px) and (max-width: 768px) {
+      .container header {
+        padding: 8rem 5rem; } }
+    @media (min-width: 768px) {
+      .container header {
+        padding: 8rem 5rem; } }
+    .container header h1 {
+      line-height: 8rem;
+      font-weight: 300;
+      letter-spacing: 3rem;
+      font-size: 2rem;
+      letter-spacing: 2rem;
+      line-height: 4rem; }
+    .container header p {
+      font-size: 1.5rem;
+      letter-spacing: 1rem;
+      line-height: 2.5rem; }
   .container aside {
     grid-area: aside; }
   .container main {
