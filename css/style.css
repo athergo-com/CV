@@ -214,13 +214,13 @@ img {
       filter: grayscale(100%); }
   .container header {
     grid-area: header;
-    /* display:flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        background: linear-gradient(to top,var(--background),var(--primary)) ;
-        @include ms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    background: linear-gradient(to top, var(--background), var(--primary));
+    /* @include ms {
            padding: 4rem 2rem;
         }
         @include mm {
