@@ -219,8 +219,7 @@ img {
     justify-content: center;
     text-align: center;
     align-items: center;
-    background: linear-gradient(to top, var(--background), var(--primary));
-    padding: 8rem 5rem; }
+    background: linear-gradient(to top, var(--background), var(--primary)); }
     @media (min-width: 425px) and (max-width: 768px) {
       .container header {
         padding: 8rem 5rem; } }
