@@ -202,38 +202,16 @@ img {
       grid: "picture header header header" auto "aside main main main" 1fr "footer footer footer footer" 10% /25% auto; } }
   .container .picture {
     grid-area: picture;
-    /* @include ms {
-            background-color:var(--background);
-        }
-        @include mm {
-            background-color:var(--background);
-        }
-        @include ml {
-            background-color:var(--background);
-        }
-        @include tb {
-            background-color:var(--background);
-        }
-        @include ls {
-            background: linear-gradient(to top,var(--background),var(--primary)) ;
-        }
-        @include ll {
-            background: linear-gradient(to top,var(--background),var(--primary)) ;
-        }
-        @include uhd {
-            background: linear-gradient(to top,var(--background),var(--primary)) ;
-        }
-        padding:6rem;
-        img{
-            border-radius: 50%;
-            filter: grayscale(100%);
-        }*/ }
+    padding: 6rem; }
     @media (max-width: 768px) {
       .container .picture {
         background-color: var(--background); } }
     @media (min-width: 768px) {
       .container .picture {
         background: linear-gradient(to top, var(--background), var(--primary)); } }
+    .container .picture img {
+      border-radius: 50%;
+      filter: grayscale(100%); }
   .container header {
     grid-area: header;
     /* display:flex;
