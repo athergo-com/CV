@@ -231,7 +231,7 @@ img {
       font-size: 4rem; }
       @media (max-width: 425px) {
         .container header h1 {
-          line-height: 4rem; } }
+          line-height: 6rem; } }
       @media (min-width: 1440px) and (max-width: 2560px) {
         .container header h1 {
           font-size: 8rem; } }
