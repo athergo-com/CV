@@ -194,10 +194,25 @@ img {
   min-height: 100vh;
   background-color: var(--background);
   display: grid; }
-  @media (max-width: 768px) {
+  @media (max-width: 320px) {
     .container {
       grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto /auto; } }
-  @media (min-width: 769px) {
+  @media (min-width: 321px) and (max-width: 375px) {
+    .container {
+      grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto /auto; } }
+  @media (min-width: 376px) and (max-width: 425px) {
+    .container {
+      grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto /auto; } }
+  @media (min-width: 426px) and (max-width: 768px) {
+    .container {
+      grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto /auto; } }
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+      grid: "picture header header header" auto "aside main main main" 1fr "footer footer footer footer" 10% /25% auto; } }
+  @media (min-width: 1025px) and (max-width: 1440px) {
+    .container {
+      grid: "picture header header header" auto "aside main main main" 1fr "footer footer footer footer" 10% /25% auto; } }
+  @media (min-width: 1441px) and (max-width: 2560px) {
     .container {
       grid: "picture header header header" auto "aside main main main" 1fr "footer footer footer footer" 10% /25% auto; } }
   .container header {
@@ -221,7 +236,7 @@ img {
         .container header h1 {
           font-size: 2rem;
           line-height: 4rem;
-          margin: 1rem 3rem 0 0; } }
+          margin: 1rem 0rem 0 0; } }
       @media (min-width: 321px) and (max-width: 375px) {
         .container header h1 {
           line-height: 4rem;
@@ -251,15 +266,15 @@ img {
         .container header h1 {
           font-size: 10rem;
           line-height: 17rem;
-          margin: 1rem 10rem 0rem 0; } }
+          margin: 1rem 5rem 0rem 0; } }
     .container header p {
       font-size: 1.5rem;
       line-height: 2.5rem;
       letter-spacing: 1rem;
       margin: 1rem 2rem; }
-      @media (max-width: 425px) {
+      @media (max-width: 320px) {
         .container header p {
-          margin: 0rem 4rem 0rem 0rem; } }
+          margin: 0rem 2rem 0rem 0rem; } }
       @media (min-width: 426px) and (max-width: 768px) {
         .container header p {
           font-size: 2rem;
@@ -281,12 +296,34 @@ img {
   .container .picture {
     grid-area: picture;
     padding: 6rem; }
-    @media (max-width: 768px) {
+    @media (max-width: 320px) {
       .container .picture {
-        background-color: var(--background); } }
-    @media (min-width: 769px) {
+        background-color: var(--background);
+        padding: 6rem; } }
+    @media (min-width: 321px) and (max-width: 375px) {
       .container .picture {
-        background: linear-gradient(to top, var(--background), var(--primary)); } }
+        background-color: var(--background);
+        padding: 6rem; } }
+    @media (min-width: 376px) and (max-width: 425px) {
+      .container .picture {
+        background-color: var(--background);
+        padding: 6rem; } }
+    @media (min-width: 426px) and (max-width: 768px) {
+      .container .picture {
+        background-color: var(--background);
+        padding: 12rem; } }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .container .picture {
+        background: linear-gradient(to top, var(--background), var(--primary));
+        padding: 4rem; } }
+    @media (min-width: 1025px) and (max-width: 1440px) {
+      .container .picture {
+        background: linear-gradient(to top, var(--background), var(--primary));
+        padding: 4rem; } }
+    @media (min-width: 1441px) and (max-width: 2560px) {
+      .container .picture {
+        background: linear-gradient(to top, var(--background), var(--primary));
+        padding: 4rem; } }
     .container .picture img {
       border-radius: 50%;
       filter: grayscale(100%); }
@@ -374,6 +411,9 @@ img {
     padding: 5rem; }
     .container main h2 {
       margin-bottom: 4rem; }
+      @media (max-width: 320px) {
+        .container main h2 {
+          font-size: 1.3rem; } }
     .container main p {
       letter-spacing: 0.2rem;
       line-height: 3rem; }
