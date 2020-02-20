@@ -220,13 +220,13 @@ img {
       grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto /auto; } }
   @media (min-width: 769px) and (max-width: 1024px) {
     .container {
-      grid: "picture header header header" auto "aside main main main" 1fr "footer footer footer footer" 10% /40% auto; } }
+      grid: "picture header header header" auto "aside main main main" auto "footer footer footer footer" auto /40% auto; } }
   @media (min-width: 1025px) and (max-width: 1440px) {
     .container {
-      grid: "picture header header header" auto "aside main main main" 1fr "footer footer footer footer" 10% /38% auto; } }
+      grid: "picture header header header" auto "aside main main main" auto "footer footer footer footer" auto /38% auto; } }
   @media (min-width: 1441px) and (max-width: 2560px) {
     .container {
-      grid: "picture header header header" auto "aside main main main" 1fr "footer footer footer footer" 10% /25% auto; } }
+      grid: "picture header header header" auto "aside main main main" auto "footer footer footer footer" auto /25% auto; } }
   .container header {
     grid-area: header;
     display: flex;
@@ -495,8 +495,7 @@ img {
         flex: auto;
         margin: 0 !important; }
   .container main {
-    grid-area: main;
-    padding: 5rem; }
+    grid-area: main; }
     .container main h2 {
       margin-bottom: 4rem; }
       @media (max-width: 320px) {
@@ -621,7 +620,45 @@ img {
           .container main .experience ul li {
             text-align: start;
             margin-left: 2rem; } }
-    .container main .content {
-      padding: 0 1rem; }
   .container footer {
-    grid-area: footer; }
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: var(--text);
+    /*padding:5rem;*/
+    background: linear-gradient(to bottom, var(--background), var(--background-light)); }
+    .container footer h2 {
+      margin-bottom: 3rem; }
+    .container footer form {
+      display: flex;
+      align-items: center; }
+      .container footer form .prefix, .container footer form .postfix {
+        background: linear-gradient(to right, var(--dark), var(--primary));
+        color: var(--text);
+        padding: 1rem 2rem; }
+      .container footer form .prefix {
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem; }
+      .container footer form button {
+        background: none;
+        border: 0;
+        cursor: pointer;
+        transition: all 0.2s; }
+        .container footer form button:hover {
+          opacity: 0.8; }
+        .container footer form button .postfix {
+          border-top-right-radius: 0.5rem;
+          border-bottom-right-radius: 0.5rem; }
+      .container footer form input {
+        outline: 0;
+        border: 0;
+        padding: 1rem 2rem;
+        line-height: 2rem; }
+        @media (max-width: 320px) {
+          .container footer form input {
+            padding: 1rem 1rem; } }
+        .container footer form input::placeholder {
+          color: var(--hint); }
