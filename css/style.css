@@ -220,7 +220,7 @@ img {
       grid: "header" auto "main" auto "picture" auto "aside" auto "footer" auto /auto; } }
   @media (min-width: 769px) and (max-width: 1024px) {
     .container {
-      grid: "picture header header header" auto "aside main main main" auto "footer footer footer footer" auto /40% auto; } }
+      grid: "picture header header header"  "aside main main main" auto "footer footer footer footer" auto /40% auto; } }
   @media (min-width: 1025px) and (max-width: 1440px) {
     .container {
       grid: "picture header header header" auto "aside main main main" auto "footer footer footer footer" auto /38% auto; } }
@@ -234,11 +234,19 @@ img {
     justify-content: center;
     text-align: center;
     align-items: center;
-    background: linear-gradient(to top, var(--background), var(--primary));
-    padding: 8rem 5rem; }
-    @media (max-width: 425px) {
+    background: radial-gradient(circle at right top, var(--primary) 2%, var(--dark) 7%, var(--background) 20%); }
+    @media (max-width: 320px) {
       .container header {
         padding: 4rem 2rem; } }
+    @media (min-width: 321px) and (max-width: 375px) {
+      .container header {
+        padding: 4rem 2rem; } }
+    @media (min-width: 376px) and (max-width: 425px) {
+      .container header {
+        padding: 4rem 4rem; } }
+    @media (min-width: 426px) and (max-width: 768px) {
+      .container header {
+        padding: 4rem 4rem; } }
     .container header h1 {
       line-height: 8rem;
       font-size: 3rem;
@@ -246,39 +254,50 @@ img {
       letter-spacing: 3rem; }
       @media (max-width: 320px) {
         .container header h1 {
-          font-size: 2rem;
+          padding-top: 8rem;
+          padding-bottom: 2rem;
+          font-size: 2.5rem;
           line-height: 4rem;
-          margin: 1rem 0 2rem 0; } }
+          letter-spacing: 2rem; } }
       @media (min-width: 321px) and (max-width: 375px) {
         .container header h1 {
-          line-height: 4rem;
-          font-size: 2rem;
-          margin: 1rem 0 2rem 0; } }
+          padding-top: 8rem;
+          padding-bottom: 2rem;
+          line-height: 4.5rem;
+          font-size: 3rem;
+          letter-spacing: 2rem; } }
       @media (min-width: 376px) and (max-width: 425px) {
         .container header h1 {
-          line-height: 4rem;
-          font-size: 2.5rem;
-          margin: 1rem 0 2rem 0; } }
+          padding-top: 8rem;
+          padding-bottom: 2rem;
+          line-height: 4.5rem;
+          font-size: 3rem;
+          letter-spacing: 2rem; } }
       @media (min-width: 426px) and (max-width: 768px) {
         .container header h1 {
-          font-size: 3rem;
-          margin: 1rem 2rem 0 0; } }
+          padding-top: 8rem;
+          padding-bottom: 2rem;
+          font-size: 3.5rem;
+          line-height: 2.5rem;
+          letter-spacing: 2.5rem; } }
       @media (min-width: 769px) and (max-width: 1024px) {
         .container header h1 {
-          font-size: 2.5rem;
-          line-height: 5rem;
-          letter-spacing: 2rem;
-          margin: 1rem 4rem 0rem 0; } }
+          font-size: 4.2rem;
+          line-height: 1rem;
+          letter-spacing: 1.5rem;
+          padding-right: 5rem; } }
       @media (min-width: 1025px) and (max-width: 1440px) {
         .container header h1 {
-          font-size: 4rem;
-          line-height: 8rem;
-          margin: 1rem 4rem 0rem 0; } }
+          font-size: 5.5rem;
+          line-height: 5rem;
+          letter-spacing: 1.75rem;
+          padding-right: 8rem; } }
       @media (min-width: 1441px) and (max-width: 2560px) {
         .container header h1 {
           font-size: 10rem;
-          line-height: 17rem;
-          margin: 1rem 5rem 0rem 0; } }
+          line-height: 10rem;
+          letter-spacing: 3.5rem;
+          padding-right: 16rem; } }
     .container header p {
       font-size: 1.5rem;
       line-height: 2.5rem;
@@ -286,23 +305,42 @@ img {
       margin: 1rem 2rem; }
       @media (max-width: 320px) {
         .container header p {
-          margin: 0rem 2rem 0rem 0rem; } }
+          line-height: 2.5rem;
+          font-size: 1.25rem;
+          letter-spacing: 1.5rem; } }
+      @media (min-width: 321px) and (max-width: 375px) {
+        .container header p {
+          line-height: 2.5rem;
+          font-size: 1.25rem;
+          letter-spacing: 1.5rem; } }
+      @media (min-width: 376px) and (max-width: 425px) {
+        .container header p {
+          line-height: 2.5rem;
+          font-size: 1.25rem;
+          letter-spacing: 1.5rem; } }
       @media (min-width: 426px) and (max-width: 768px) {
         .container header p {
-          font-size: 2rem;
-          margin: 1rem 8rem 2rem 0rem; } }
+          font-size: 1.25rem;
+          line-height: 4rem;
+          letter-spacing: 1.5rem; } }
       @media (min-width: 769px) and (max-width: 1024px) {
         .container header p {
-          font-size: 1.5rem;
-          margin: 1rem 4rem 2rem 0rem; } }
+          font-size: 1.25rem;
+          line-height: 4rem;
+          letter-spacing: 1.5rem;
+          padding-right: 5rem; } }
       @media (min-width: 1025px) and (max-width: 1440px) {
         .container header p {
-          margin: 1rem 4rem 2rem 0rem;
-          font-size: 2.5rem; } }
+          font-size: 1.5rem;
+          line-height: 5rem;
+          letter-spacing: 1.75rem;
+          padding-right: 8rem; } }
       @media (min-width: 1441px) and (max-width: 2560px) {
         .container header p {
-          font-size: 6rem;
-          line-height: 7.5rem; } }
+          font-size: 3rem;
+          line-height: 10rem;
+          letter-spacing: 3.5rem;
+          padding-right: 16rem; } }
     .container header span {
       display: inline-block;
       animation: bounce 2s; }
@@ -312,31 +350,31 @@ img {
     @media (max-width: 320px) {
       .container .picture {
         background-color: var(--background);
-        padding: 6rem; } }
+        padding: 8rem; } }
     @media (min-width: 321px) and (max-width: 375px) {
       .container .picture {
         background-color: var(--background);
-        padding: 6rem; } }
+        padding: 10rem; } }
     @media (min-width: 376px) and (max-width: 425px) {
       .container .picture {
         background-color: var(--background);
-        padding: 6rem; } }
+        padding: 11rem; } }
     @media (min-width: 426px) and (max-width: 768px) {
       .container .picture {
         background-color: var(--background);
-        padding: 14rem; } }
+        padding: 24rem; } }
     @media (min-width: 769px) and (max-width: 1024px) {
       .container .picture {
-        background: linear-gradient(to top, var(--background), var(--primary));
-        padding: 8rem; } }
+        background-color: var(--background);
+        padding: 11rem; } }
     @media (min-width: 1025px) and (max-width: 1440px) {
       .container .picture {
-        background: linear-gradient(to top, var(--background), var(--primary));
-        padding: 8rem; } }
+        background-color: var(--background);
+        padding: 16rem; } }
     @media (min-width: 1441px) and (max-width: 2560px) {
       .container .picture {
-        background: linear-gradient(to top, var(--background), var(--primary));
-        padding: 8rem; } }
+        background-color: var(--background);
+        padding: 12rem; } }
     .container .picture img {
       border-radius: 50%;
       filter: grayscale(100%); }
@@ -620,6 +658,8 @@ img {
           .container main .experience ul li {
             text-align: start;
             margin-left: 2rem; } }
+    .container main .content {
+      padding: 0 1rem; }
   .container footer {
     grid-area: footer;
     display: flex;
